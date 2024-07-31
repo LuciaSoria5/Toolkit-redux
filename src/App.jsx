@@ -1,25 +1,28 @@
 import { useState } from 'react'
 import './App.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment, decrement, incrementBy } from './store/slices/counter/';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const { counter } = useSelector( state => state.counter ); // toma el objeto counter
+  const dispatch = useDispatch(); // sabe a que reducer va a llegar
 
   return (
     <>
-      <div>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Count is {counter}</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={ () => dispatch( increment() ) }>
+          Increment
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button onClick={ () => dispatch( decrement() ) }>
+          Decrement
+        </button>
+                    {/* El payload es 2 --> { payload: 2 } */}
+        <button onClick={ () => dispatch( incrementBy(2) ) }>
+          Increment by 2
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
