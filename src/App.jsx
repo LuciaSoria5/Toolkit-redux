@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import './App.css'
+// import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, decrement, incrementBy } from './store/slices/counter/';
 
@@ -18,7 +17,7 @@ function App() {
         <button onClick={ () => dispatch( decrement() ) }>
           Decrement
         </button>
-                    {/* El payload es 2 --> { payload: 2 } */}
+                  {/* El payload es 2 --> { payload: 2 } */}
         <button onClick={ () => dispatch( incrementBy(2) ) }>
           Increment by 2
         </button>
