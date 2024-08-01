@@ -8,13 +8,13 @@ export const TodoApp = () => {
     // const { data: todos = [], isLoading } = useGetTodosQuery();
     const { data: todo, isLoading } = useGetTodoQuery( todoId );
 
-    const netxTodo = () => {
+    const nextTodo = () => {
         setTodoId( todoId + 1 );
     }
 
     const previousTodo = () => {
         if (todoId === 1) return;
-        setTodoId( todoId + 1 );
+        setTodoId( todoId - 1 );
     }
 
   return (
@@ -32,7 +32,7 @@ export const TodoApp = () => {
         </button>
 
         <button 
-            onClick={ netxTodo }
+            onClick={ nextTodo }
         >
             Next Todo
         </button>
