@@ -1,8 +1,25 @@
-# React + Vite
+# Toolkit Redux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de Ract desarrollada con el propósito de aprender a utilizar Redux junto con Redux Toolkit.
 
-Currently, two official plugins are available:
+## Requisitos
+Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado lo siguiente:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js
+- npm (Node Package Manager) o yarn
+
+## Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/LuciaSoria5/Toolkit-redux.git
+   ```
+   
+2. Navega al directorio del proyecto e instala las dependencias:
+   ```bash
+   npm install
+    ```
+   
+3. Ejecuta la aplicación en modo desarrollo:
+    ```bash
+   npm run dev
+    ```
